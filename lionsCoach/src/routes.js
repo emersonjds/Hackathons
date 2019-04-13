@@ -1,15 +1,20 @@
-import {
-  createAppContainer,
-  createStackNavigator,
-  SwitchNavigator,
-  createSwitchNavigator
-} from "react-navigation";
+import { createAppContainer, createStackNavigator } from "react-navigation";
 import Profile from "./pages/Profile";
+import Tabs from "./pages/Tabs";
 
 const Routes = createAppContainer(
-  createSwitchNavigator({
-    Profile: Profile
-  })
+  createStackNavigator(
+    {
+      Profile,
+      Tabs
+    },
+    {
+      headerMode: "none",
+      navigationOptions: {
+        headerVisible: false
+      }
+    }
+  )
 );
 
 export default Routes;

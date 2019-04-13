@@ -10,6 +10,7 @@ export default class Profile extends Component {
   }
 
   render() {
+    const { navigation } = this.props;
     return (
       <View style={styles.container}>
         <Image
@@ -21,7 +22,10 @@ export default class Profile extends Component {
           resizeMode="contain"
         />
 
-        <TouchableOpacity style={styles.enterButton}>
+        <TouchableOpacity
+          style={styles.enterButton}
+          onPress={() => navigation.navigate("Tabs")}
+        >
           <Text style={styles.textButton}>Entrar</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.enterButton}>
