@@ -4,7 +4,7 @@ import {
   createBottomTabNavigator
 } from "react-navigation";
 import { Home } from "./Home";
-import { Points } from "./Points";
+import { Team } from "./Team";
 import { Substituition } from "./Substituition";
 import { Escalation } from "./Escalation";
 import { colors } from "../../styles";
@@ -16,12 +16,17 @@ const BottomNavigator = createBottomTabNavigator(
     Home: {
       screen: Home,
       navigationOptions: {
+        tabBarIcon: () => <IconFontAwesome name="home" size={21} color="#FFF" />
+      }
+    },
+    Team: {
+      screen: Team,
+      navigationOptions: {
         tabBarIcon: () => (
-          <IconFontAwesome name="home" size={21} color="#7A7A7A" />
+          <IconMaterialCommunity name="soccer-field" size={21} color="#FFF" />
         )
       }
     },
-    Points: Points,
     Substituition: Substituition,
     Escalation: Escalation
   },
