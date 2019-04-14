@@ -7,6 +7,7 @@ import { Home } from "./Home";
 import { Team } from "./Team";
 import { Substituition } from "./Substituition";
 import { Escalation } from "./Escalation";
+import { InGame } from "./InGame";
 import { colors } from "../../styles";
 import IconFontAwesome from "react-native-vector-icons/FontAwesome";
 import IconMaterialCommunity from "react-native-vector-icons/MaterialCommunityIcons";
@@ -27,8 +28,14 @@ const BottomNavigator = createBottomTabNavigator(
         )
       }
     },
-    Substituition: Substituition,
-    Escalation: Escalation
+    InGame: {
+      screen: InGame,
+      navigationOptions: {
+        tabBarIcon: () => (
+          <IconMaterialCommunity name="soccer-field" size={21} color="#FFF" />
+        )
+      }
+    }
   },
   {
     tabBarOptions: {
@@ -53,6 +60,12 @@ const Tabs = createStackNavigator({
       headerTitleStyle: {
         fontSize: 18
       }
+    }
+  },
+  inGame: {
+    screen: InGame,
+    navigationOptions: {
+      title: "MATCH"
     }
   }
 });

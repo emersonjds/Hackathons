@@ -329,6 +329,45 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#FFF",
     fontWeight: "bold"
+  },
+  makeAHint: {
+    height: 52,
+    backgroundColor: "rgb(128,68,190)",
+    width: 337,
+    borderRadius: 40,
+    alignSelf: "center",
+    marginBottom: 20,
+    alignItems: "center",
+    justifyContent: "center"
+  },
+
+  makeAHint2: {
+    height: 52,
+    backgroundColor: "rgb(128,68,190)",
+    width: 250,
+    borderRadius: 40,
+    alignSelf: "center",
+    marginBottom: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 20
+  },
+  placar: {
+    marginTop: 10,
+    height: 90,
+    flexDirection: "row",
+    justifyContent: "space-around"
+  },
+  twitter: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 15
+  },
+  facebook: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center"
   }
   // END ATK LD
 

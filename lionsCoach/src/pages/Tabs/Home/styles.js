@@ -7,9 +7,10 @@ const styles = StyleSheet.create({
     backgroundColor: colors.dark_bg
   },
   content: {
-    flex: 1,
+    flex: 5,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    marginTop: 35
   },
   card: {
     width: 334,
@@ -126,7 +127,8 @@ const styles = StyleSheet.create({
   teamsContainer: {
     width: "30%",
     flexDirection: "row",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+    marginBottom: 15
   }
 });
 

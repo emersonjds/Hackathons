@@ -5,7 +5,10 @@ import LinearGradient from "react-native-linear-gradient";
 import avatar from "../../../assets/img/oval.png";
 import orlandoLogo from "../../../assets/img/orlandoCityScLogo.png";
 import orlandoPride from "../../../assets/img/orlandoPrideLogo.png";
+import last_results from "../../../assets/img/last_results.png";
+import friends_ranking from "../../../assets/img/friends_ranking.png";
 import graph from "../../../assets/img/graph.png";
+import data from "../../../assets/img/data.png";
 
 import styles from "./styles";
 
@@ -88,8 +91,7 @@ export class Home extends Component {
                 </View>
               </LinearGradient>
             </Card>
-
-            <Card style={[styles.card, styles.card2]}>
+            <Card style={[styles.card, styles.card1]}>
               <LinearGradient colors={["#8044BC", "#653595"]}>
                 <View style={styles.graphCard}>
                   <View style={styles.containerTextGraph}>
@@ -98,7 +100,7 @@ export class Home extends Component {
                     </Text>
                     <Text style={{ marginTop: 10 }}>NEXT</Text>
                   </View>
-                  <Image source={graph} resizeMode="cover" />
+                  <Image source={data} resizeMode="contain" />
                 </View>
               </LinearGradient>
             </Card>
@@ -112,7 +114,7 @@ export class Home extends Component {
                     </Text>
                     <Text style={{ marginTop: 10 }}>NEXT</Text>
                   </View>
-                  <Image source={graph} resizeMode="cover" />
+                  <Image source={friends_ranking} resizeMode="cover" />
                 </View>
               </LinearGradient>
             </Card>
