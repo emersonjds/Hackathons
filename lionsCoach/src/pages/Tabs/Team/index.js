@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, Image, TouchableOpacity } from "react-native";
+import { Text, View, Image, TouchableOpacity, StatusBar } from "react-native";
 import campo from "../../../assets/img/campo.png";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Dropdown } from "react-native-material-dropdown";
@@ -30,6 +30,7 @@ export class Team extends Component {
 
     return (
       <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
         <View style={styles.containerTatic}>
           <Text style={styles.title}>Scale the Team</Text>
           <Text style={styles.subtitle}>Team Building</Text>

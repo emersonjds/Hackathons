@@ -6,7 +6,8 @@ import {
   TouchableOpacity,
   ScrollView,
   TextInput,
-  Switch
+  Switch,
+  StatusBar
 } from "react-native";
 import campo from "../../../assets/img/campo.png";
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -74,6 +75,7 @@ export class InGame extends Component {
 
     return (
       <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.placar}>
             <Image source={orlando} />

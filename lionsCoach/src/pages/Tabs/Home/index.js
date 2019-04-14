@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Text, View, Image, ScrollView, TouchableOpacity } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+  StatusBar
+} from "react-native";
 import CardStack, { Card } from "react-native-card-stack-swiper";
 import LinearGradient from "react-native-linear-gradient";
 import avatar from "../../../assets/img/oval.png";
@@ -18,6 +25,7 @@ export class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
         {/* USER DETAILS */}
         <View style={styles.userData}>
           <View style={styles.data}>
