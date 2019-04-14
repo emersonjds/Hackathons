@@ -10,6 +10,8 @@ import graph from "../../../assets/img/graph.png";
 import styles from "./styles";
 
 export class Home extends Component {
+  state = {};
+
   render() {
     return (
       <View style={styles.container}>
