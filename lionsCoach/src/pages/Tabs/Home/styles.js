@@ -4,20 +4,16 @@ import { colors, metrics } from "../../../styles";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.dark_bg,
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: colors.dark_bg
   },
   content: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 20
+    justifyContent: "center"
   },
   card: {
     width: 334,
     height: 300,
-    marginBottom: 20,
     borderRadius: 15,
     backgroundColor: "red",
     shadowColor: "rgba(0,0,0,0.5)",
@@ -91,12 +87,33 @@ const styles = StyleSheet.create({
   textOpenButton: {
     color: "#FFF",
     fontSize: 14
+  },
+  cardArea: {
+    width: metrics.screenWidth,
+    height: 320,
+    backgroundColor: "yellow",
+    marginTop: 5
+  },
+  choiceTeam: {
+    height: 52,
+    width: metrics.screenWidth,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 30,
+    flexDirection: "row"
+  },
+  containerChoiceText: {
+    width: "70%"
+  },
+  textChoice: {
+    fontSize: 14,
+    color: "#FFF"
+  },
+  teamsContainer: {
+    width: "30%",
+    flexDirection: "row",
+    justifyContent: "space-around"
   }
-  // pointsAndDetails: {
-  //   flexDirection: "row",
-  //   backgroundColor: "green",
-  //   height: 60
-  // }
 });
 
 export default styles;

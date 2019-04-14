@@ -3,6 +3,9 @@ import { Text, View, Image, ScrollView, TouchableOpacity } from "react-native";
 import CardStack, { Card } from "react-native-card-stack-swiper";
 import LinearGradient from "react-native-linear-gradient";
 import avatar from "../../../assets/img/oval.png";
+import orlandoLogo from "../../../assets/img/orlandoCityScLogo.png";
+import orlandoPride from "../../../assets/img/orlandoPrideLogo.png";
+
 import styles from "./styles";
 
 export class Home extends Component {
@@ -40,42 +43,57 @@ export class Home extends Component {
         </View>
         {/* END POINTS AND DETAILS */}
 
-        <CardStack
-          style={styles.content}
-          ref={swiper => {
-            this.swiper = swiper;
-          }}
-          renderNoMoreCards={() => (
-            <Text style={{ fontWeight: "700", fontSize: 18, color: "gray" }}>
-              Sem graficos para exibição
-            </Text>
-          )}
-          ref={swiper => {
-            this.swiper = swiper;
-          }}
-          loop={true}
-        >
-          <Card style={[styles.card, styles.card1]}>
-            <LinearGradient colors={["#8044BC", "#653595"]}>
-              {/* REMOVER ESTA AREA */}
-              {/* <Text style={styles.label}>A</Text> */}
-            </LinearGradient>
-          </Card>
+        {/* CHOICE TEAM */}
+        <View style={styles.choiceTeam}>
+          <View style={styles.containerChoiceText}>
+            <Text style={styles.textChoice}>SELECT THE TEAM</Text>
+          </View>
 
-          <Card style={[styles.card, styles.card2]}>
-            <LinearGradient colors={["#8044BC", "#653595"]}>
-              {/* REMOVER ESTA AREA */}
-              {/* <Text style={styles.label}>B</Text> */}
-            </LinearGradient>
-          </Card>
+          <View style={styles.teamsContainer}>
+            <Image source={orlandoLogo} />
+            <Image source={orlandoPride} />
+          </View>
+        </View>
+        {/* END CHOICE TEAM */}
 
-          <Card style={[styles.card, styles.card2]}>
-            <LinearGradient colors={["#8044BC", "#653595"]}>
-              {/* REMOVER ESTA AREA */}
-              {/* <Text style={styles.label}>B</Text> */}
-            </LinearGradient>
-          </Card>
-        </CardStack>
+        <View style={styles.cardArea}>
+          <CardStack
+            style={styles.content}
+            ref={swiper => {
+              this.swiper = swiper;
+            }}
+            renderNoMoreCards={() => (
+              <Text style={{ fontWeight: "700", fontSize: 18, color: "gray" }}>
+                Sem graficos para exibição
+              </Text>
+            )}
+            ref={swiper => {
+              this.swiper = swiper;
+            }}
+            loop={true}
+          >
+            <Card style={[styles.card, styles.card1]}>
+              <LinearGradient colors={["#8044BC", "#653595"]}>
+                {/* REMOVER ESTA AREA */}
+                {/* <Text style={styles.label}>A</Text> */}
+              </LinearGradient>
+            </Card>
+
+            <Card style={[styles.card, styles.card2]}>
+              <LinearGradient colors={["#8044BC", "#653595"]}>
+                {/* REMOVER ESTA AREA */}
+                {/* <Text style={styles.label}>B</Text> */}
+              </LinearGradient>
+            </Card>
+
+            <Card style={[styles.card, styles.card2]}>
+              <LinearGradient colors={["#8044BC", "#653595"]}>
+                {/* REMOVER ESTA AREA */}
+                {/* <Text style={styles.label}>B</Text> */}
+              </LinearGradient>
+            </Card>
+          </CardStack>
+        </View>
       </View>
     );
   }
