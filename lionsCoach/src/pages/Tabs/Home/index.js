@@ -5,6 +5,7 @@ import LinearGradient from "react-native-linear-gradient";
 import avatar from "../../../assets/img/oval.png";
 import orlandoLogo from "../../../assets/img/orlandoCityScLogo.png";
 import orlandoPride from "../../../assets/img/orlandoPrideLogo.png";
+import graph from "../../../assets/img/graph.png";
 
 import styles from "./styles";
 
@@ -74,22 +75,43 @@ export class Home extends Component {
           >
             <Card style={[styles.card, styles.card1]}>
               <LinearGradient colors={["#8044BC", "#653595"]}>
-                {/* REMOVER ESTA AREA */}
-                {/* <Text style={styles.label}>A</Text> */}
+                <View style={styles.graphCard}>
+                  <View style={styles.containerTextGraph}>
+                    <Text style={styles.textContainerGraph}>
+                      Weekly Summary
+                    </Text>
+                    <Text style={{ marginTop: 10 }}>NEXT</Text>
+                  </View>
+                  <Image source={graph} resizeMode="cover" />
+                </View>
               </LinearGradient>
             </Card>
 
             <Card style={[styles.card, styles.card2]}>
               <LinearGradient colors={["#8044BC", "#653595"]}>
-                {/* REMOVER ESTA AREA */}
-                {/* <Text style={styles.label}>B</Text> */}
+                <View style={styles.graphCard}>
+                  <View style={styles.containerTextGraph}>
+                    <Text style={styles.textContainerGraph}>
+                      Weekly Summary
+                    </Text>
+                    <Text style={{ marginTop: 10 }}>NEXT</Text>
+                  </View>
+                  <Image source={graph} resizeMode="cover" />
+                </View>
               </LinearGradient>
             </Card>
 
             <Card style={[styles.card, styles.card2]}>
               <LinearGradient colors={["#8044BC", "#653595"]}>
-                {/* REMOVER ESTA AREA */}
-                {/* <Text style={styles.label}>B</Text> */}
+                <View style={styles.graphCard}>
+                  <View style={styles.containerTextGraph}>
+                    <Text style={styles.textContainerGraph}>
+                      Weekly Summary
+                    </Text>
+                    <Text style={{ marginTop: 10 }}>NEXT</Text>
+                  </View>
+                  <Image source={graph} resizeMode="cover" />
+                </View>
               </LinearGradient>
             </Card>
           </CardStack>

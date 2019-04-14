@@ -14,9 +14,12 @@ const styles = StyleSheet.create({
   card: {
     width: 334,
     height: 300,
-    borderRadius: 15,
-    backgroundColor: "red",
+    borderRadius: 30,
+    // backgroundColor: "red",
+    alignItems: "center",
+    justifyContent: "center",
     shadowColor: "rgba(0,0,0,0.5)",
+    padding: 5,
     shadowOffset: {
       width: 0,
       height: 1
@@ -29,13 +32,24 @@ const styles = StyleSheet.create({
   card2: {
     borderRadius: 15
   },
-  // label: {
-  //   textAlign: "center",
-  //   fontSize: 55,
-  //   fontFamily: "System",
-  //   color: "#ffffff",
-  //   backgroundColor: "transparent"
-  // },
+  graphCard: {
+    // backgroundColor: "blue",
+    padding: 10,
+    alignItems: "center"
+  },
+  containerTextGraph: {
+    flexDirection: "row",
+    marginBottom: 20,
+    justifyContent: "space-around",
+    width: "100%",
+    alignItems: "center"
+  },
+  textContainerGraph: {
+    fontSize: 20,
+    color: "#FFF",
+    marginTop: 10
+  },
+
   userData: {
     flexDirection: "row",
     height: 80,
@@ -91,7 +105,7 @@ const styles = StyleSheet.create({
   cardArea: {
     width: metrics.screenWidth,
     height: 320,
-    backgroundColor: "yellow",
+    // backgroundColor: "yellow",
     marginTop: 5
   },
   choiceTeam: {
