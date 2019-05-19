@@ -1,0 +1,3 @@
+rootProject.name = 'pmi_hackathon'
+
+include ':app'
