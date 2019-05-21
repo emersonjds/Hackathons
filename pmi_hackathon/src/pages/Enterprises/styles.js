@@ -16,19 +16,24 @@ export const EnterpriseContainer = styled.View`
 `;
 
 export const EnterpriseLogoContainer = styled.View`
-  height: 100%;
   width: 20%;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const EntrepriseInformations = styled.View`
   width: 60%;
   background: pink;
+  justify-content: center;
+  padding: 0 10px;
 `;
 
 export const ContainerButtons = styled.View`
   height: 100%;
   width: 20%;
   background: blue;
+  align-items: center;
+  justify-content: space-around;
 `;
 
 export const AddButton = styled.TouchableOpacity`
@@ -39,6 +44,14 @@ export const AddButton = styled.TouchableOpacity`
   right: 20;
   background: #cecece;
   border-radius: 100;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ActionButtons = styled.TouchableOpacity`
+  height: 30;
+  width: 60;
+  background: white;
   align-items: center;
   justify-content: center;
 `;

@@ -1,52 +1,60 @@
 import React, { Component } from "react";
-import { Text, View, ScrollView } from "react-native";
+import { Text, ScrollView, Image } from "react-native";
 import {
   Container,
   EnterpriseContainer,
   EnterpriseLogoContainer,
   EntrepriseInformations,
   ContainerButtons,
-  AddButton
+  AddButton,
+  ActionButtons
 } from "./styles";
 import Icon from "react-native-vector-icons/FontAwesome5";
-import FontAwesome, { Icons } from "react-native-fontawesome";
+
+import { Avatar } from "react-native-elements";
+import restaurante from "../../assets/imgs/kinect.jpg";
+import resta from "../../assets/imgs/resta.png";
 
 export class Enterprises extends Component {
   static navigationOptions = {
     title: "Empresas"
   };
   render() {
+    const { navigation } = this.props;
     return (
       <Container>
         <ScrollView>
           <EnterpriseContainer>
-            <EnterpriseLogoContainer />
-            <EntrepriseInformations />
-            <ContainerButtons />
-          </EnterpriseContainer>
-
-          <EnterpriseContainer>
-            <EnterpriseLogoContainer />
-            <EntrepriseInformations />
-            <ContainerButtons />
-          </EnterpriseContainer>
-
-          <EnterpriseContainer>
-            <EnterpriseLogoContainer />
-            <EntrepriseInformations />
-            <ContainerButtons />
-          </EnterpriseContainer>
-
-          <EnterpriseContainer>
-            <EnterpriseLogoContainer />
-            <EntrepriseInformations />
-            <ContainerButtons />
-          </EnterpriseContainer>
-
-          <EnterpriseContainer>
-            <EnterpriseLogoContainer />
-            <EntrepriseInformations />
-            <ContainerButtons />
+            <EnterpriseLogoContainer>
+              <Image
+                source={resta}
+                resizeMode="contain"
+                style={{ height: 60, width: 60 }}
+              />
+              {/* <Avatar
+                size="medium"
+                rounded
+                source={{
+                  uri:
+                    "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"
+                }}
+                activeOpacity={0.7}
+              /> */}
+            </EnterpriseLogoContainer>
+            <EntrepriseInformations>
+              <Text> Restaurante Dona Joane</Text>
+              <Text> Contribuinte a 3 anos</Text>
+            </EntrepriseInformations>
+            <ContainerButtons>
+              <ActionButtons onPress={() => navigation.navigate("AddConsume")}>
+                <Text>ADD</Text>
+              </ActionButtons>
+              <ActionButtons
+                onPress={() => navigation.navigate("InfoEnterprise")}
+              >
+                <Text>INFO</Text>
+              </ActionButtons>
+            </ContainerButtons>
           </EnterpriseContainer>
         </ScrollView>
         <AddButton>
