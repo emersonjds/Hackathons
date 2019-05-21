@@ -1,12 +1,52 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
+import { Text, View, ScrollView } from "react-native";
+import {
+  Container,
+  EnterpriseContainer,
+  EnterpriseLogoContainer,
+  EntrepriseInformations,
+  ContainerButtons
+} from "./styles";
 
 export class Enterprises extends Component {
+  static navigationOptions = {
+    title: "Empresas"
+  };
   render() {
     return (
-      <View>
-        <Text> Enterprises </Text>
-      </View>
+      <Container>
+        <ScrollView>
+          <EnterpriseContainer>
+            <EnterpriseLogoContainer />
+            <EntrepriseInformations />
+            <ContainerButtons />
+          </EnterpriseContainer>
+
+          <EnterpriseContainer>
+            <EnterpriseLogoContainer />
+            <EntrepriseInformations />
+            <ContainerButtons />
+          </EnterpriseContainer>
+
+          <EnterpriseContainer>
+            <EnterpriseLogoContainer />
+            <EntrepriseInformations />
+            <ContainerButtons />
+          </EnterpriseContainer>
+
+          <EnterpriseContainer>
+            <EnterpriseLogoContainer />
+            <EntrepriseInformations />
+            <ContainerButtons />
+          </EnterpriseContainer>
+
+          <EnterpriseContainer>
+            <EnterpriseLogoContainer />
+            <EntrepriseInformations />
+            <ContainerButtons />
+          </EnterpriseContainer>
+        </ScrollView>
+      </Container>
     );
   }
 }
