@@ -5,8 +5,11 @@ import {
   EnterpriseContainer,
   EnterpriseLogoContainer,
   EntrepriseInformations,
-  ContainerButtons
+  ContainerButtons,
+  AddButton
 } from "./styles";
+import Icon from "react-native-vector-icons/FontAwesome5";
+import FontAwesome, { Icons } from "react-native-fontawesome";
 
 export class Enterprises extends Component {
   static navigationOptions = {
@@ -46,6 +49,9 @@ export class Enterprises extends Component {
             <ContainerButtons />
           </EnterpriseContainer>
         </ScrollView>
+        <AddButton>
+          <Icon name="plus" color="#FFF" size={23} />
+        </AddButton>
       </Container>
     );
   }
