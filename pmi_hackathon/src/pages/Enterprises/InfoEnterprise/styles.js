@@ -6,3 +6,11 @@ export const Container = styled.View`
   justify-content: center;
   padding: 20px;
 `;
+
+export const BadgeButton = styled.TouchableOpacity`
+  height: 50;
+  width: 80%;
+  background-color: blue;
+  align-items: center;
+  justify-content: center;
+`;
