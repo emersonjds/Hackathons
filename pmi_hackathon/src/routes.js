@@ -12,11 +12,11 @@ import Badges from "./pages/Enterprises/Badges";
 
 const Routes = createAppContainer(
   createStackNavigator({
-    Badges,
     Enterprises,
     Login,
     AddConsume,
-    InfoEnterprise
+    InfoEnterprise,
+    Badges
   })
 );
 
