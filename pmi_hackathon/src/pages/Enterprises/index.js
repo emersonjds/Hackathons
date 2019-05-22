@@ -49,38 +49,38 @@ export class Enterprises extends Component {
           {data &&
             data.map(enterprise => {
               return (
-                <TouchableOpacity
-                  onPress={() => navigation.navigate("InfoEnterprise")}
-                >
-                  <EnterpriseContainer>
-                    <EnterpriseLogoContainer>
-                      <Image
-                        source={resta}
-                        resizeMode="contain"
-                        style={{ height: 60, width: 60 }}
-                      />
-                    </EnterpriseLogoContainer>
-                    <EntrepriseInformations>
-                      <Text> {enterprise.title}</Text>
-                      <Text>
-                        {" "}
-                        Contribuinte a {enterprise.quantity_mounth} meses
-                      </Text>
-                    </EntrepriseInformations>
-                    <ContainerButtons>
-                      <ActionButtons
-                        onPress={() => navigation.navigate("AddConsume")}
-                      >
-                        <Text style={{ color: "#FFF" }}>ADD</Text>
-                      </ActionButtons>
-                      <ActionButtons
-                        onPress={() => navigation.navigate("InfoEnterprise")}
-                      >
-                        <Text style={{ color: "#FFF" }}>INFO</Text>
-                      </ActionButtons>
-                    </ContainerButtons>
-                  </EnterpriseContainer>
-                </TouchableOpacity>
+                <EnterpriseContainer>
+                  <EnterpriseLogoContainer>
+                    <Image
+                      source={resta}
+                      resizeMode="contain"
+                      style={{ height: 60, width: 60 }}
+                    />
+                  </EnterpriseLogoContainer>
+                  <EntrepriseInformations>
+                    <Text> {enterprise.title}</Text>
+                    <Text>
+                      {" "}
+                      Contribuinte a {enterprise.quantity_mounth} meses
+                    </Text>
+                  </EntrepriseInformations>
+                  <ContainerButtons>
+                    <ActionButtons
+                      onPress={() => navigation.navigate("AddConsume")}
+                    >
+                      <Text style={{ color: "#FFF" }}>ADD</Text>
+                    </ActionButtons>
+                    <ActionButtons
+                      onPress={() =>
+                        navigation.navigate("InfoEnterprise", {
+                          itemId: enterprise._id
+                        })
+                      }
+                    >
+                      <Text style={{ color: "#FFF" }}>INFO</Text>
+                    </ActionButtons>
+                  </ContainerButtons>
+                </EnterpriseContainer>
               );
             })}
         </ScrollView>
