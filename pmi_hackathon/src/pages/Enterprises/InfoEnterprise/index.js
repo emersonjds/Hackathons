@@ -1,13 +1,55 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
+import { Text, View, Dimensions, ScrollView } from "react-native";
+import {
+  LineChart,
+  BarChart,
+  PieChart,
+  ProgressChart,
+  ContributionGraph,
+  StackedBarChart
+} from "react-native-chart-kit";
+import { Container } from "./styles";
+import { PieChart } from "react-native-svg-charts";
+import * as shape from "d3-shape";
 
-export class InfoEnterprise extends Component {
+export class InfoEnterprise extends React.PureComponent {
   render() {
-    return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
-    );
+    const data = [
+      50,
+      10,
+      40,
+      95,
+      -4,
+      -24,
+      85,
+      91,
+      35,
+      53,
+      -53,
+      24,
+      50,
+      -20,
+      -80
+    ];
+
+    const randomColor = () =>
+      ("#" + ((Math.random() * 0xffffff) << 0).toString(16) + "000000").slice(
+        0,
+        7
+      );
+
+    const pieData = data
+      .filter(value => value > 0)
+      .map((value, index) => ({
+        value,
+        svg: {
+          fill: randomColor(),
+          onPress: () => console.log("press", index)
+        },
+        key: `pie-${index}`
+      }));
+
+    return <PieChart style={{ height: 200 }} data={pieData} />;
   }
 }
 
