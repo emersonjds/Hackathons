@@ -15,9 +15,10 @@ export class InfoEnterprise extends Component {
   };
 
   render() {
+    const { navigation } = this.props;
     return (
       <Container>
-        <BadgeButton>
+        <BadgeButton onPress={() => navigation.navigate("Badges")}>
           <Text>Badges</Text>
         </BadgeButton>
       </Container>
