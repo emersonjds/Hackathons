@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 
 export const Container = styled.View`
-  background: orange;
+  /* background: orange; */
   flex: 1;
   padding: 20px 10px;
   position: relative;
@@ -13,6 +13,8 @@ export const EnterpriseContainer = styled.View`
   width: 100%;
   flex-direction: row;
   margin-bottom: 10px;
+  border-width: 1px;
+  border-color: #cecece;
 `;
 
 export const EnterpriseLogoContainer = styled.View`
@@ -23,7 +25,7 @@ export const EnterpriseLogoContainer = styled.View`
 
 export const EntrepriseInformations = styled.View`
   width: 60%;
-  background: pink;
+  /* background: pink; */
   justify-content: center;
   padding: 0 10px;
 `;
@@ -31,7 +33,7 @@ export const EntrepriseInformations = styled.View`
 export const ContainerButtons = styled.View`
   height: 100%;
   width: 20%;
-  background: blue;
+  /* background: blue; */
   align-items: center;
   justify-content: space-around;
 `;
@@ -42,7 +44,7 @@ export const AddButton = styled.TouchableOpacity`
   position: absolute;
   bottom: 50;
   right: 20;
-  background: #cecece;
+  background: #312e2e;
   border-radius: 100;
   align-items: center;
   justify-content: center;
@@ -51,7 +53,7 @@ export const AddButton = styled.TouchableOpacity`
 export const ActionButtons = styled.TouchableOpacity`
   height: 30;
   width: 60;
-  background: white;
+  background: #312e2e;
   align-items: center;
   justify-content: center;
 `;

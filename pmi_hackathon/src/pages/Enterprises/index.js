@@ -17,7 +17,8 @@ import resta from "../../assets/imgs/resta.png";
 
 export class Enterprises extends Component {
   static navigationOptions = {
-    title: "Empresas"
+    title: "Empresas",
+    headerBackTitle: null
   };
   render() {
     const { navigation } = this.props;
@@ -47,12 +48,12 @@ export class Enterprises extends Component {
             </EntrepriseInformations>
             <ContainerButtons>
               <ActionButtons onPress={() => navigation.navigate("AddConsume")}>
-                <Text>ADD</Text>
+                <Text style={{ color: "#FFF" }}>ADD</Text>
               </ActionButtons>
               <ActionButtons
                 onPress={() => navigation.navigate("InfoEnterprise")}
               >
-                <Text>INFO</Text>
+                <Text style={{ color: "#FFF" }}>INFO</Text>
               </ActionButtons>
             </ContainerButtons>
           </EnterpriseContainer>
