@@ -66,7 +66,11 @@ export class Enterprises extends Component {
                   </EntrepriseInformations>
                   <ContainerButtons>
                     <ActionButtons
-                      onPress={() => navigation.navigate("AddConsume")}
+                      onPress={() =>
+                        navigation.navigate("AddConsume", {
+                          obj: enterprise
+                        })
+                      }
                     >
                       <Text style={{ color: "#FFF" }}>ADD</Text>
                     </ActionButtons>
