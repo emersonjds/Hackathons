@@ -30,13 +30,8 @@ export class AddConsume extends Component {
     const { navigation } = this.props;
     const { value } = this.state;
     const enterpriseObject = navigation.getParam("obj");
-    console.log("inicial", enterpriseObject.quantity_liters);
     const newObject = enterpriseObject;
     newObject.quantity_liters = parseInt(value);
-    console.log("old", enterpriseObject);
-    console.log("new", newObject);
-
-    // let url = api.post();
 
     let data = {
       method: "POST",
