@@ -85,7 +85,11 @@ export class Home extends Component {
               />
             </ContainerBanner>
           </ScrollView>
-          <Text style={{ marginTop: 10, marginBottom: 10 }}>Divider</Text>
+          <Text
+            style={{ marginTop: 10, marginBottom: 10, alignSelf: "center" }}
+          >
+            ULTIMAS PECAS DA SEMANA
+          </Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             <ContainerMiniBanner
               onPress={() => navigation.navigate("ProductDetails")}
@@ -109,7 +113,11 @@ export class Home extends Component {
               <Image source={sala} style={{ height: 150, width: 150 }} />
             </ContainerMiniBanner>
           </ScrollView>
-          <Text style={{ marginTop: 10, marginBottom: 10 }}>Divider</Text>
+          <Text
+            style={{ marginTop: 10, marginBottom: 10, alignSelf: "center" }}
+          >
+            NOVIDADES DA ESTACAO
+          </Text>
           <ScrollView>
             <ContainerPhotos>
               <TouchableWithoutFeedback>

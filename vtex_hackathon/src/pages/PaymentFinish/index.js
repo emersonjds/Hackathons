@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import { Text, View, TouchableOpacity } from "react-native";
-import { Container, Order, DataLine, OrderId, TextId } from "./styles";
+import {
+  Container,
+  Order,
+  DataLine,
+  OrderId,
+  TextId,
+  FinishButton
+} from "./styles";
 import IconFontAwesome from "react-native-vector-icons/FontAwesome";
 
 export class PaymentFinish extends Component {
@@ -19,50 +26,6 @@ export class PaymentFinish extends Component {
   render() {
     return (
       <Container>
-        <Order>
-          <OrderId style={{ backgroundColor: "#eca725" }}>
-            <TextId>#3443256</TextId>
-          </OrderId>
-          <DataLine>
-            <Text>Data da Ordem </Text>
-            <Text>31/05/2019 </Text>
-          </DataLine>
-          <DataLine>
-            <Text>Status: </Text>
-            <Text>PENDING </Text>
-          </DataLine>
-          <DataLine>
-            <Text>Payment Method </Text>
-            <Text>Credit Card</Text>
-          </DataLine>
-          <DataLine>
-            <Text>TOTAL: </Text>
-            <Text style={{ fontWeight: "bold" }}>2800,00 </Text>
-          </DataLine>
-        </Order>
-
-        <Order>
-          <OrderId>
-            <TextId>#3156246</TextId>
-          </OrderId>
-          <DataLine>
-            <Text>Data da Ordem </Text>
-            <Text>28/03/2019 </Text>
-          </DataLine>
-          <DataLine>
-            <Text>Status: </Text>
-            <Text>COMPLETED </Text>
-          </DataLine>
-          <DataLine>
-            <Text>Payment Method </Text>
-            <Text>Credit Card</Text>
-          </DataLine>
-          <DataLine>
-            <Text>TOTAL: </Text>
-            <Text style={{ fontWeight: "bold" }}>2800,00 </Text>
-          </DataLine>
-        </Order>
-
         <Order>
           <OrderId>
             <TextId>#28432457</TextId>
@@ -84,6 +47,21 @@ export class PaymentFinish extends Component {
             <Text style={{ fontWeight: "bold" }}>2800,00 </Text>
           </DataLine>
         </Order>
+
+        <TouchableOpacity
+          style={{
+            backgroundColor: "lightgreen",
+            height: 50,
+            width: "100%",
+            alignSelf: "center",
+            marginTop: 20,
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: 10
+          }}
+        >
+          <Text>Finalizar Compra</Text>
+        </TouchableOpacity>
       </Container>
     );
   }

@@ -130,7 +130,7 @@ export class ProductDetails extends Component {
             )}
           </ContainerDetails>
           <ButtonPayment onPress={() => navigation.navigate("FinishPayment")}>
-            <Text style={{ color: "#FFF" }}>IR PARA PAGAMENTO</Text>
+            <Text>IR PARA PAGAMENTO</Text>
           </ButtonPayment>
         </Container>
       </View>

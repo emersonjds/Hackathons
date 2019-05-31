@@ -38,6 +38,10 @@ const MyFavorites = createStackNavigator({
   MyFavorites: { screen: Favorites }
 });
 
+const MyAccount = createStackNavigator({
+  MyAccount: { screen: Account }
+});
+
 const Tabs = createBottomTabNavigator({
   Home: {
     screen: HomeScreen,
@@ -78,7 +82,8 @@ const Routes = createAppContainer(
       Tabs,
       DetailsProduct,
       FinishPayment,
-      MyFavorites
+      MyFavorites,
+      MyAccount
     },
     {
       headerMode: "none",

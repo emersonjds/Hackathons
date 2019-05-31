@@ -8,13 +8,12 @@ export const Container = styled.View`
 
 export const ContainerProduct = styled.View`
   height: 250;
-  background-color: yellow;
 `;
 
 export const ContainerBanner = styled.View`
   height: 250px;
   width: ${metrics.screenWidth};
-  background-color: pink;
+  /* background-color: pink; */
 `;
 
 export const Line = styled.View`
@@ -60,7 +59,7 @@ export const ButtonPayment = styled.TouchableOpacity`
   align-self: center;
   align-items: center;
   justify-content: center;
-  background-color: green;
-  border-radius: 30;
+  background-color: lightgreen;
+  border-radius: 10;
   margin-top: 20px;
 `;
