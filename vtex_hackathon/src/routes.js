@@ -1,3 +1,6 @@
+import React from "react";
+import IconFontAwesome from "react-native-vector-icons/FontAwesome";
+import IconMaterialCommunity from "react-native-vector-icons/MaterialCommunityIcons";
 import {
   createAppContainer,
   createStackNavigator,
@@ -22,13 +25,34 @@ const AccountStack = createStackNavigator({
 
 const Tabs = createBottomTabNavigator({
   Home: {
-    screen: HomeScreen
+    screen: HomeScreen,
+    navigationOptions: {
+      title: "HOME",
+      tabBarLabel: "HOME",
+      tabBarIcon: () => (
+        <IconMaterialCommunity name="home-outline" size={21} color="#7A7A7A" />
+      )
+    }
   },
   Cart: {
-    screen: CartStack
+    screen: CartStack,
+    navigationOptions: {
+      title: "CARRINHO",
+      tabBarLabel: "CARRINHO",
+      tabBarIcon: () => (
+        <IconMaterialCommunity name="cart" size={21} color="#7A7A7A" />
+      )
+    }
   },
   Account: {
-    screen: AccountStack
+    screen: AccountStack,
+    navigationOptions: {
+      title: "CONTA",
+      tabBarLabel: "CONTA",
+      tabBarIcon: () => (
+        <IconFontAwesome name="user" size={21} color="#7A7A7A" />
+      )
+    }
   }
 });
 

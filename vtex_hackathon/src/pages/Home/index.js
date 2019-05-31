@@ -1,22 +1,58 @@
 import React, { Component } from "react";
-import { Text, View, Image, ScrollView } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+  TouchableWithoutFeedback
+} from "react-native";
 import {
   Container,
   ContainerBanner,
   ContainerMiniBanner,
-  ContainerPhoto
+  ContainerPhoto,
+  ContainerPhotos,
+  Photo
 } from "./styles";
 import cama from "../../assets/img/cama.jpg";
 import sala from "../../assets/img/sala.jpg";
 import cozinha from "../../assets/img/cozinha.jpg";
 import quarto from "../../assets/img/quarto.jpg";
-import { Divider } from "react-native-elements";
-import { Tile } from "react-native-elements";
+import IconFontAwesome from "react-native-vector-icons/FontAwesome";
+import FeatherIcon from "react-native-vector-icons/Feather";
+import { Avatar } from "react-native-elements";
+import IconMaterialCommunity from "react-native-vector-icons/MaterialCommunityIcons";
 
 export class Home extends Component {
-  static navigationOptions = {
-    title: "Home"
-  };
+  static navigationOptions = ({ navigation }) => ({
+    title: "Home",
+    headerLeft: (
+      <IconFontAwesome
+        name="align-justify"
+        size={22}
+        style={{ paddingLeft: 16, color: "#000" }}
+      />
+    ),
+    headerRight: (
+      <View style={{ flexDirection: "row" }}>
+        <TouchableOpacity>
+          <IconFontAwesome
+            name="heart"
+            size={22}
+            style={{ paddingRight: 16, color: "#000" }}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <IconMaterialCommunity
+            name="cart"
+            size={22}
+            style={{ paddingRight: 16, color: "#000" }}
+          />
+        </TouchableOpacity>
+      </View>
+    )
+  });
   render() {
     return (
       <Container>
@@ -59,32 +95,26 @@ export class Home extends Component {
           </ScrollView>
           <Text style={{ marginTop: 10, marginBottom: 10 }}>Divider</Text>
           <ScrollView>
-            <ContainerPhoto>
-              <Image
-                source={sala}
-                style={{ height: 180, width: "48%", marginTop: 10 }}
-              />
-              <Image
-                source={sala}
-                style={{ height: 180, width: "48%", marginTop: 10 }}
-              />
-              <Image
-                source={sala}
-                style={{ height: 180, width: "48%", marginTop: 10 }}
-              />
-              <Image
-                source={sala}
-                style={{ height: 180, width: "48%", marginTop: 10 }}
-              />
-              <Image
-                source={sala}
-                style={{ height: 180, width: "48%", marginTop: 10 }}
-              />
-              <Image
-                source={sala}
-                style={{ height: 180, width: "48%", marginTop: 10 }}
-              />
-            </ContainerPhoto>
+            <ContainerPhotos>
+              <TouchableWithoutFeedback>
+                <Photo source={sala} resizeMode="cover" />
+              </TouchableWithoutFeedback>
+              <TouchableWithoutFeedback>
+                <Photo source={sala} resizeMode="cover" />
+              </TouchableWithoutFeedback>
+              <TouchableWithoutFeedback>
+                <Photo source={sala} resizeMode="cover" />
+              </TouchableWithoutFeedback>
+              <TouchableWithoutFeedback>
+                <Photo source={sala} resizeMode="cover" />
+              </TouchableWithoutFeedback>
+              <TouchableWithoutFeedback>
+                <Photo source={sala} resizeMode="cover" />
+              </TouchableWithoutFeedback>
+              <TouchableWithoutFeedback>
+                <Photo source={sala} resizeMode="cover" />
+              </TouchableWithoutFeedback>
+            </ContainerPhotos>
           </ScrollView>
         </ScrollView>
       </Container>
