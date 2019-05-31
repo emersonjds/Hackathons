@@ -15,6 +15,7 @@ import foto_1 from "../../assets/img/1.png";
 import foto_2 from "../../assets/img/2.png";
 import foto_3 from "../../assets/img/3.png";
 import IconFontAwesome from "react-native-vector-icons/FontAwesome";
+import { Rating, AirbnbRating } from "react-native-elements";
 
 export class ProductDetails extends Component {
   state = {
@@ -97,23 +98,33 @@ export class ProductDetails extends Component {
             ) : (
               <ScrollView>
                 <View style={{ marginTop: 15 }}>
-                  <Text>Nome Usuario</Text>
-                  <Text>Comentario</Text>
-                  <Line />
-                  <Text>Nome Usuario</Text>
-                  <Text>Comentario</Text>
-                  <Line />
-                  <Text>Nome Usuario</Text>
-                  <Text>Comentario</Text>
-                  <Line />
-                  <Text>Nome Usuario</Text>
-                  <Text>Comentario</Text>
-                  <Line />
-                  <Text>Nome Usuario</Text>
-                  <Text>Comentario</Text>
-                  <Line />
-                  <Text>Nome Usuario</Text>
-                  <Text>Comentario</Text>
+                  <Text>Jairo Iglesias </Text>
+                  <Text>Excelente, super recomendo a compra</Text>
+                  <Line
+                    style={{ borderBottomColor: "#cecece", marginTop: 5 }}
+                  />
+                  <Text>Matheus Catossi</Text>
+                  <Text>Atendeu as expectativas, super recomendo</Text>
+                  <Line
+                    style={{ borderBottomColor: "#cecece", marginTop: 5 }}
+                  />
+                  <Text>Emerson Silva</Text>
+                  <Text>Entrega super rapida, super recomendo</Text>
+                  <Line
+                    style={{ borderBottomColor: "#cecece", marginTop: 5 }}
+                  />
+                  <Text>Mariane Teixeira</Text>
+                  <Text>Produto excelente, super recomendo</Text>
+                  <Line
+                    style={{ borderBottomColor: "#cecece", marginTop: 5 }}
+                  />
+                  <Text>Victor Luis</Text>
+                  <Text>Meu quarto ficou incrivel, super recomendo</Text>
+                  <Line
+                    style={{ borderBottomColor: "#cecece", marginTop: 5 }}
+                  />
+                  <Text>Leticia Maria</Text>
+                  <Text>Melhor compra que fiz nos ultimos tempos</Text>
                 </View>
               </ScrollView>
             )}

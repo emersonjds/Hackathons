@@ -23,6 +23,17 @@ import IconFontAwesome from "react-native-vector-icons/FontAwesome";
 import FeatherIcon from "react-native-vector-icons/Feather";
 import { Avatar } from "react-native-elements";
 import IconMaterialCommunity from "react-native-vector-icons/MaterialCommunityIcons";
+import sala_1 from "../../assets/img/slider/sala_1.jpg";
+import sala_2 from "../../assets/img/slider/sala_2.jpg";
+import sala_3 from "../../assets/img/slider/sala_3.jpg";
+import sala_5 from "../../assets/img/slider/sala_5.jpg";
+import sala_6 from "../../assets/img/slider/sala_6.jpg";
+import decor_1 from "../../assets/img/decor/decor_1.jpg";
+import decor_2 from "../../assets/img/decor/decor_2.jpg";
+import decor_3 from "../../assets/img/decor/decor_3.png";
+import decor_4 from "../../assets/img/decor/decor_4.jpg";
+import decor_5 from "../../assets/img/decor/decor_5.jpg";
+import decor_6 from "../../assets/img/decor/decor_6.jpg";
 
 export class Home extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -77,20 +88,20 @@ export class Home extends Component {
             <ContainerMiniBanner
               onPress={() => navigation.navigate("ProductDetails")}
             >
-              <Image source={quarto} style={{ height: 150, width: 150 }} />
+              <Image source={sala_1} style={{ height: 150, width: 150 }} />
             </ContainerMiniBanner>
             <ContainerMiniBanner>
-              <Image source={cozinha} style={{ height: 150, width: 150 }} />
+              <Image source={sala_2} style={{ height: 150, width: 150 }} />
             </ContainerMiniBanner>
 
             <ContainerMiniBanner>
-              <Image source={sala} style={{ height: 150, width: 150 }} />
+              <Image source={sala_3} style={{ height: 150, width: 150 }} />
             </ContainerMiniBanner>
             <ContainerMiniBanner>
-              <Image source={sala} style={{ height: 150, width: 150 }} />
+              <Image source={sala_5} style={{ height: 150, width: 150 }} />
             </ContainerMiniBanner>
             <ContainerMiniBanner>
-              <Image source={sala} style={{ height: 150, width: 150 }} />
+              <Image source={sala_6} style={{ height: 150, width: 150 }} />
             </ContainerMiniBanner>
             <ContainerMiniBanner>
               <Image source={sala} style={{ height: 150, width: 150 }} />
@@ -100,22 +111,22 @@ export class Home extends Component {
           <ScrollView>
             <ContainerPhotos>
               <TouchableWithoutFeedback>
-                <Photo source={sala} resizeMode="cover" />
+                <Photo source={decor_1} resizeMode="cover" />
               </TouchableWithoutFeedback>
               <TouchableWithoutFeedback>
-                <Photo source={sala} resizeMode="cover" />
+                <Photo source={decor_2} resizeMode="cover" />
               </TouchableWithoutFeedback>
               <TouchableWithoutFeedback>
-                <Photo source={sala} resizeMode="cover" />
+                <Photo source={decor_3} resizeMode="cover" />
               </TouchableWithoutFeedback>
               <TouchableWithoutFeedback>
-                <Photo source={sala} resizeMode="cover" />
+                <Photo source={decor_4} resizeMode="cover" />
               </TouchableWithoutFeedback>
               <TouchableWithoutFeedback>
-                <Photo source={sala} resizeMode="cover" />
+                <Photo source={decor_5} resizeMode="cover" />
               </TouchableWithoutFeedback>
               <TouchableWithoutFeedback>
-                <Photo source={sala} resizeMode="cover" />
+                <Photo source={decor_6} resizeMode="cover" />
               </TouchableWithoutFeedback>
             </ContainerPhotos>
           </ScrollView>
