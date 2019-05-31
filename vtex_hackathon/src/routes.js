@@ -12,15 +12,23 @@ const CartStack = createStackNavigator({
   Cart: { screen: Cart }
 });
 
+const HomeScreen = createStackNavigator({
+  Home: { screen: Home }
+});
+
+const AccountStack = createStackNavigator({
+  Account: { screen: Account }
+});
+
 const Tabs = createBottomTabNavigator({
   Home: {
-    screen: Home
+    screen: HomeScreen
   },
   Cart: {
     screen: CartStack
   },
   Account: {
-    screen: Account
+    screen: AccountStack
   }
 });
 
