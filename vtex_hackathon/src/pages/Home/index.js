@@ -52,6 +52,7 @@ export class Home extends Component {
             name="heart"
             size={22}
             style={{ paddingRight: 16, color: "#000" }}
+            onPress={() => navigation.navigate("MyFavorites")}
           />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {}}>
@@ -59,6 +60,7 @@ export class Home extends Component {
             name="cart"
             size={22}
             style={{ paddingRight: 16, color: "#000" }}
+            onPress={() => navigation.navigate("Cart")}
           />
         </TouchableOpacity>
       </View>
