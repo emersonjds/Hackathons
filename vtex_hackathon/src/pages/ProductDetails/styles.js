@@ -55,7 +55,7 @@ export const ButtonsActions = styled.TouchableOpacity`
 export const ContainerInformation = styled.View``;
 
 export const ButtonPayment = styled.TouchableOpacity`
-  height: 60;
+  height: 50;
   width: 80%;
   align-self: center;
   align-items: center;

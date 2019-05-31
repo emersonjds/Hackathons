@@ -12,6 +12,7 @@ import Cart from "./pages/Cart";
 import Account from "./pages/Account";
 import ProductDetails from "./pages/ProductDetails";
 import Favorites from "./pages/Favorites";
+import PaymentFinish from "./pages/PaymentFinish";
 
 const CartStack = createStackNavigator({
   Cart: { screen: Cart }
@@ -27,6 +28,10 @@ const AccountStack = createStackNavigator({
 
 const DetailsProduct = createStackNavigator({
   ProductDetails: { screen: ProductDetails }
+});
+
+const FinishPayment = createStackNavigator({
+  PaymentFinish: { screen: PaymentFinish }
 });
 
 const Tabs = createBottomTabNavigator({
@@ -68,6 +73,7 @@ const Routes = createAppContainer(
       Login,
       Tabs,
       DetailsProduct,
+      FinishPayment,
       Favorites
     },
     {

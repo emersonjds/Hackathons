@@ -24,21 +24,6 @@ import FeatherIcon from "react-native-vector-icons/Feather";
 import { Avatar } from "react-native-elements";
 import IconMaterialCommunity from "react-native-vector-icons/MaterialCommunityIcons";
 
-const imagens = [
-  {
-    id: 1,
-    url: "../../assets/img/cama.jpg"
-  },
-  {
-    id: 2,
-    url: "../../assets/img/sala.jpg"
-  },
-  {
-    id: 3,
-    url: "../../assets/img/cozinha.jpg"
-  }
-];
-
 export class Home extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: "Home",

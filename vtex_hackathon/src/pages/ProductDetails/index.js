@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, ScrollView, Image } from "react-native";
+import { Text, View, ScrollView, Image, TouchableOpacity } from "react-native";
 import {
   Container,
   ContainerProduct,
@@ -14,7 +14,7 @@ import {
 import foto_1 from "../../assets/img/1.png";
 import foto_2 from "../../assets/img/2.png";
 import foto_3 from "../../assets/img/3.png";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import IconFontAwesome from "react-native-vector-icons/FontAwesome";
 
 export class ProductDetails extends Component {
   state = {
@@ -27,11 +27,21 @@ export class ProductDetails extends Component {
     });
   };
 
-  static navigationOptions = {
-    title: "Detalhes do Produto"
-  };
+  static navigationOptions = ({ navigation }) => ({
+    title: "Detalhes do Produto",
+    headerLeft: (
+      <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+        <IconFontAwesome
+          name="chevron-left"
+          size={22}
+          style={{ paddingLeft: 16, color: "#000" }}
+        />
+      </TouchableOpacity>
+    )
+  });
   render() {
     const { isflagged } = this.state;
+    const { navigation } = this.props;
     return (
       <View>
         <Container>
@@ -108,7 +118,7 @@ export class ProductDetails extends Component {
               </ScrollView>
             )}
           </ContainerDetails>
-          <ButtonPayment>
+          <ButtonPayment onPress={() => navigation.navigate("FinishPayment")}>
             <Text style={{ color: "#FFF" }}>IR PARA PAGAMENTO</Text>
           </ButtonPayment>
         </Container>
