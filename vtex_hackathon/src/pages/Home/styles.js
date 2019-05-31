@@ -20,9 +20,11 @@ export const ContainerMiniBanner = styled.View`
   margin: 0 5px;
 `;
 
-export const ContainerMiddle = styled.View`
-  height: 200;
-  background-color: blue;
+export const ContainerPhoto = styled.View`
+  width: ${metrics.screenWidth};
+  /* background: orange; */
+  /* flex: 1; */
+  flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
-  flex-direction: roww;
 `;

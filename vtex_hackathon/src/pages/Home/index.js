@@ -4,7 +4,7 @@ import {
   Container,
   ContainerBanner,
   ContainerMiniBanner,
-  ContainerMiddle
+  ContainerPhoto
 } from "./styles";
 import cama from "../../assets/img/cama.jpg";
 import sala from "../../assets/img/sala.jpg";
@@ -58,6 +58,34 @@ export class Home extends Component {
             </ContainerMiniBanner>
           </ScrollView>
           <Text style={{ marginTop: 10, marginBottom: 10 }}>Divider</Text>
+          <ScrollView>
+            <ContainerPhoto>
+              <Image
+                source={sala}
+                style={{ height: 180, width: "48%", marginTop: 10 }}
+              />
+              <Image
+                source={sala}
+                style={{ height: 180, width: "48%", marginTop: 10 }}
+              />
+              <Image
+                source={sala}
+                style={{ height: 180, width: "48%", marginTop: 10 }}
+              />
+              <Image
+                source={sala}
+                style={{ height: 180, width: "48%", marginTop: 10 }}
+              />
+              <Image
+                source={sala}
+                style={{ height: 180, width: "48%", marginTop: 10 }}
+              />
+              <Image
+                source={sala}
+                style={{ height: 180, width: "48%", marginTop: 10 }}
+              />
+            </ContainerPhoto>
+          </ScrollView>
         </ScrollView>
       </Container>
     );
