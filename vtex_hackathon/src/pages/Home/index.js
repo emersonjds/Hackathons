@@ -24,6 +24,21 @@ import FeatherIcon from "react-native-vector-icons/Feather";
 import { Avatar } from "react-native-elements";
 import IconMaterialCommunity from "react-native-vector-icons/MaterialCommunityIcons";
 
+const imagens = [
+  {
+    id: 1,
+    url: "../../assets/img/cama.jpg"
+  },
+  {
+    id: 2,
+    url: "../../assets/img/sala.jpg"
+  },
+  {
+    id: 3,
+    url: "../../assets/img/cozinha.jpg"
+  }
+];
+
 export class Home extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: "Home",
@@ -36,14 +51,14 @@ export class Home extends Component {
     ),
     headerRight: (
       <View style={{ flexDirection: "row" }}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => {}}>
           <IconFontAwesome
             name="heart"
             size={22}
             style={{ paddingRight: 16, color: "#000" }}
           />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => {}}>
           <IconMaterialCommunity
             name="cart"
             size={22}
@@ -54,6 +69,7 @@ export class Home extends Component {
     )
   });
   render() {
+    const { navigation } = this.props;
     return (
       <Container>
         <ScrollView>
@@ -73,7 +89,9 @@ export class Home extends Component {
           </ScrollView>
           <Text style={{ marginTop: 10, marginBottom: 10 }}>Divider</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <ContainerMiniBanner>
+            <ContainerMiniBanner
+              onPress={() => navigation.navigate("ProductDetails")}
+            >
               <Image source={quarto} style={{ height: 150, width: 150 }} />
             </ContainerMiniBanner>
             <ContainerMiniBanner>

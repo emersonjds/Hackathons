@@ -10,6 +10,8 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Account from "./pages/Account";
+import ProductDetails from "./pages/ProductDetails";
+import Favorites from "./pages/Favorites";
 
 const CartStack = createStackNavigator({
   Cart: { screen: Cart }
@@ -21,6 +23,10 @@ const HomeScreen = createStackNavigator({
 
 const AccountStack = createStackNavigator({
   Account: { screen: Account }
+});
+
+const DetailsProduct = createStackNavigator({
+  ProductDetails: { screen: ProductDetails }
 });
 
 const Tabs = createBottomTabNavigator({
@@ -60,7 +66,9 @@ const Routes = createAppContainer(
   createStackNavigator(
     {
       Login,
-      Tabs
+      Tabs,
+      DetailsProduct,
+      Favorites
     },
     {
       headerMode: "none",
