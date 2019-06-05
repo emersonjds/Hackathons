@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, TouchableOpacity } from "react-native";
+import { Text, View, TouchableOpacity, ScrollView } from "react-native";
 import { Container, Order, DataLine, OrderId, TextId } from "./styles";
 import IconFontAwesome from "react-native-vector-icons/FontAwesome";
 
@@ -19,71 +19,73 @@ export class Cart extends Component {
   render() {
     return (
       <Container>
-        <Order>
-          <OrderId style={{ backgroundColor: "orange" }}>
-            <TextId>#3443256 . . . cashback 15%</TextId>
-          </OrderId>
-          <DataLine>
-            <Text>Data da Ordem </Text>
-            <Text>31/05/2019 </Text>
-          </DataLine>
-          <DataLine>
-            <Text>Status: </Text>
-            <Text>PENDING </Text>
-          </DataLine>
-          <DataLine>
-            <Text>Payment Method </Text>
-            <Text>Credit Card</Text>
-          </DataLine>
-          <DataLine>
-            <Text>TOTAL: </Text>
-            <Text style={{ fontWeight: "bold" }}>2800,00 </Text>
-          </DataLine>
-        </Order>
+        <ScrollView>
+          <Order>
+            <OrderId style={{ backgroundColor: "orange" }}>
+              <TextId>#3446754 . . . cashback 15%</TextId>
+            </OrderId>
+            <DataLine>
+              <Text>Data da Ordem </Text>
+              <Text>31/05/2019 </Text>
+            </DataLine>
+            <DataLine>
+              <Text>Status: </Text>
+              <Text>PENDING </Text>
+            </DataLine>
+            <DataLine>
+              <Text>Payment Method </Text>
+              <Text>Credit Card</Text>
+            </DataLine>
+            <DataLine>
+              <Text>TOTAL: </Text>
+              <Text style={{ fontWeight: "bold" }}>220,00 </Text>
+            </DataLine>
+          </Order>
 
-        <Order>
-          <OrderId style={{ backgroundColor: "lightgreen" }}>
-            <TextId>#3156246</TextId>
-          </OrderId>
-          <DataLine>
-            <Text>Data da Ordem </Text>
-            <Text>28/03/2019 </Text>
-          </DataLine>
-          <DataLine>
-            <Text>Status: </Text>
-            <Text>COMPLETED </Text>
-          </DataLine>
-          <DataLine>
-            <Text>Payment Method </Text>
-            <Text>Credit Card</Text>
-          </DataLine>
-          <DataLine>
-            <Text>TOTAL: </Text>
-            <Text style={{ fontWeight: "bold" }}>2800,00 </Text>
-          </DataLine>
-        </Order>
+          <Order>
+            <OrderId style={{ backgroundColor: "lightgreen" }}>
+              <TextId>#3156246</TextId>
+            </OrderId>
+            <DataLine>
+              <Text>Data da Ordem </Text>
+              <Text>28/03/2019 </Text>
+            </DataLine>
+            <DataLine>
+              <Text>Status: </Text>
+              <Text>COMPLETED </Text>
+            </DataLine>
+            <DataLine>
+              <Text>Payment Method </Text>
+              <Text>Credit Card</Text>
+            </DataLine>
+            <DataLine>
+              <Text>TOTAL: </Text>
+              <Text style={{ fontWeight: "bold" }}>280,00 </Text>
+            </DataLine>
+          </Order>
 
-        <Order>
-          <OrderId style={{ backgroundColor: "lightgreen" }}>
-            <TextId>#28432457</TextId>
-          </OrderId>
-          <DataLine>
-            <Text>Data da Ordem </Text>
-            <Text>30/12/2018 </Text>
-          </DataLine>
-          <DataLine>
-            <Text>Status: </Text>
-            <Text> COMPLETED</Text>
-          </DataLine>
-          <DataLine>
-            <Text>Payment Method </Text>
-            <Text>Credit Card</Text>
-          </DataLine>
-          <DataLine>
-            <Text>TOTAL: </Text>
-            <Text style={{ fontWeight: "bold" }}>2800,00 </Text>
-          </DataLine>
-        </Order>
+          <Order>
+            <OrderId style={{ backgroundColor: "lightgreen" }}>
+              <TextId>#28433337</TextId>
+            </OrderId>
+            <DataLine>
+              <Text>Data da Ordem </Text>
+              <Text>30/12/2018 </Text>
+            </DataLine>
+            <DataLine>
+              <Text>Status: </Text>
+              <Text> COMPLETED</Text>
+            </DataLine>
+            <DataLine>
+              <Text>Payment Method </Text>
+              <Text>Credit Card</Text>
+            </DataLine>
+            <DataLine>
+              <Text>TOTAL: </Text>
+              <Text style={{ fontWeight: "bold" }}>390,00 </Text>
+            </DataLine>
+          </Order>
+        </ScrollView>
       </Container>
     );
   }

@@ -41,7 +41,7 @@ export class Favorites extends Component {
             </FotoProduto>
             <Description>
               <Text>Escritorio Decorado Mariana</Text>
-              <Text>R$ 6.000,00</Text>
+              <Text>R$ 426.00,00</Text>
             </Description>
             <IconHeart>
               <IconFontAwesome name="heart" color="#f00" size={28} />
@@ -57,7 +57,7 @@ export class Favorites extends Component {
             </FotoProduto>
             <Description>
               <Text>Escritorio Decorado Mariana</Text>
-              <Text>R$ 6.000,00</Text>
+              <Text>R$ 312.00,00</Text>
             </Description>
             <IconHeart>
               <IconFontAwesome name="heart" color="#f00" size={28} />
@@ -72,8 +72,8 @@ export class Favorites extends Component {
               />
             </FotoProduto>
             <Description>
-              <Text>Escritorio Decorado Mariana</Text>
-              <Text>R$ 6.000,00</Text>
+              <Text>Escritorio Decorado Amelia</Text>
+              <Text>R$ 298.00,00</Text>
             </Description>
             <IconHeart>
               <IconFontAwesome name="heart" color="#f00" size={28} />
@@ -89,7 +89,7 @@ export class Favorites extends Component {
             </FotoProduto>
             <Description>
               <Text>Escritorio Decorado Mariana</Text>
-              <Text>R$ 6.000,00</Text>
+              <Text>R$ 300,00</Text>
             </Description>
             <IconHeart>
               <IconFontAwesome name="heart" color="#f00" size={28} />
@@ -105,7 +105,7 @@ export class Favorites extends Component {
             </FotoProduto>
             <Description>
               <Text>Escritorio Decorado Mariana</Text>
-              <Text>R$ 6.000,00</Text>
+              <Text>R$ 180,00</Text>
             </Description>
             <IconHeart>
               <IconFontAwesome name="heart" color="#f00" size={28} />

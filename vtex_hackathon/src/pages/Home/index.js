@@ -34,6 +34,7 @@ import decor_3 from "../../assets/img/decor/decor_3.png";
 import decor_4 from "../../assets/img/decor/decor_4.jpg";
 import decor_5 from "../../assets/img/decor/decor_5.jpg";
 import decor_6 from "../../assets/img/decor/decor_6.jpg";
+import foto_1 from "../../assets/img/1.png";
 
 export class Home extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -71,7 +72,11 @@ export class Home extends Component {
     return (
       <Container>
         <ScrollView>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            pagingEnabled
+          >
             <ContainerBanner>
               <Image source={cama} style={{ height: "100%", width: "100%" }} />
             </ContainerBanner>
@@ -94,7 +99,7 @@ export class Home extends Component {
             <ContainerMiniBanner
               onPress={() => navigation.navigate("ProductDetails")}
             >
-              <Image source={sala_1} style={{ height: 150, width: 150 }} />
+              <Image source={foto_1} style={{ height: 150, width: 150 }} />
             </ContainerMiniBanner>
             <ContainerMiniBanner>
               <Image source={sala_2} style={{ height: 150, width: 150 }} />

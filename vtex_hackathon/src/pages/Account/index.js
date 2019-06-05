@@ -30,7 +30,7 @@ export class Account extends Component {
         <ContainerCashBack>
           <TextUser style={{ fontSize: 20 }}>Meus Cashbacks</TextUser>
           <Line />
-          <TextUser style={{ fontSize: 40 }}>R$ 57.00,00</TextUser>
+          <TextUser style={{ fontSize: 40 }}>R$ 57,00</TextUser>
         </ContainerCashBack>
       </Container>
     );

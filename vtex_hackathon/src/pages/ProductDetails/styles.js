@@ -3,7 +3,6 @@ import { colors, metrics } from "../../styles";
 
 export const Container = styled.View`
   flex: 1;
-  background-color: red;
 `;
 
 export const ContainerProduct = styled.View`
@@ -61,5 +60,5 @@ export const ButtonPayment = styled.TouchableOpacity`
   justify-content: center;
   background-color: lightgreen;
   border-radius: 10;
-  margin-top: 20px;
+  margin-top: 10px;
 `;

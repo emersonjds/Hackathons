@@ -44,10 +44,14 @@ export class ProductDetails extends Component {
     const { isflagged } = this.state;
     const { navigation } = this.props;
     return (
-      <View>
-        <Container>
+      <Container>
+        <ScrollView>
           <ContainerProduct>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              pagingEnabled
+            >
               <ContainerBanner>
                 <Image
                   source={foto_1}
@@ -72,9 +76,12 @@ export class ProductDetails extends Component {
           <Line />
           <ContainerDetails>
             <Titulo>
-              Quarto de Casal Completo MadeiraMadeira com Guarda Roupa 3 Portas
-              8 Gavetas e Cabeceira com 2 Criado Canela
+              Cama de Casal. Queima de estoque, ultimas unidades . Colchao
+              Ortobom, box com madeira de marfim e pes em aço escovado
             </Titulo>
+            <Text style={{ marginTop: 10, fontSize: 15, fontWeight: "bold" }}>
+              R$ 380,00
+            </Text>
 
             <ContainerButtons>
               <ButtonsActions onPress={this.toogleFlag}>
@@ -87,10 +94,10 @@ export class ProductDetails extends Component {
 
             {!isflagged ? (
               <View style={{ marginTop: 15 }}>
-                <Text>Possui Portas : 03 </Text>
+                <Text>Possui : 1 cama </Text>
                 <Text>Acabamento : Pintura</Text>
                 <Text>Cor : Canela </Text>
-                <Text>Material Principal: MDF </Text>
+                <Text>Material Principal: Marfim </Text>
                 <Text>Cor Predominante: Marrom </Text>
                 <Text>Ambiente: Quarto</Text>
                 <Text>Acompanha cama: Sim </Text>
@@ -132,8 +139,8 @@ export class ProductDetails extends Component {
           <ButtonPayment onPress={() => navigation.navigate("FinishPayment")}>
             <Text>IR PARA PAGAMENTO</Text>
           </ButtonPayment>
-        </Container>
-      </View>
+        </ScrollView>
+      </Container>
     );
   }
 }
