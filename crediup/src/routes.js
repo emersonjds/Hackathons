@@ -5,7 +5,7 @@ import Tabs from './pages/Tabs';
 
 const Routes = createAppContainer(
   createStackNavigator(
-    { Login, Tabs },
+    { Tabs, Login },
     {
       headerMode: 'none',
       navigationOptions: {
