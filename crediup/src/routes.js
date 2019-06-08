@@ -1,11 +1,18 @@
-import {
-  createAppContainer,
-  createSwitchNavigator,
-  createStackNavigator
-} from "react-navigation";
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 
-import Main from "./pages/Main";
+import Login from './pages/Login';
+import Tabs from './pages/Tabs';
 
-const Routes = createAppContainer(createSwitchNavigator({ Main }));
+const Routes = createAppContainer(
+  createStackNavigator(
+    { Login, Tabs },
+    {
+      headerMode: 'none',
+      navigationOptions: {
+        headerVisible: false,
+      },
+    },
+  ),
+);
 
 export default Routes;
