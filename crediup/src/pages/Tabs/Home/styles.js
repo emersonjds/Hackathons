@@ -44,7 +44,7 @@ export const GenerateCard = styled.View`
   width: 80%;
   align-self: center;
   border-width: 2px;
-  border-color: blue;
+  border-color: #063d54;
   border-radius: ${metrics.baseRadius};
   align-items: center;
   justify-content: center;
@@ -65,7 +65,7 @@ export const ButtonsActions = styled.View`
   height: 80%;
   width: 30%;
   border-width: 2px;
-  border-color: blue;
+  border-color: #063d54;
   border-radius: ${metrics.baseRadius};
   align-items: center;
   justify-content: center;
