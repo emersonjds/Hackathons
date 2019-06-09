@@ -21,13 +21,13 @@ export class Home extends Component {
   state = {};
 
   render() {
+    const { navigation } = this.props;
     return (
       <Container>
         <CardArea>
           <Image source={card} resizeMode="contain" style={{ width: '100%', height: '100%' }} />
         </CardArea>
         <Divider style={{ backgroundColor: '#063d54' }} />
-
         <ContainerUserData>
           <LeftArea>
             <Text style={{ color: '#063d54' }}>Limite Disponivel / Ocultar</Text>
@@ -37,22 +37,19 @@ export class Home extends Component {
             </View>
           </LeftArea>
           <RightArea>
-            <GenerateCard>
+            <GenerateCard onPress={() => navigation.navigate('GenerateCard')}>
               <Text style={{ color: '#063d54' }}> Gerar </Text>
               <Text style={{ color: '#063d54' }}>Cartao Virtual</Text>
             </GenerateCard>
           </RightArea>
         </ContainerUserData>
-        <Divider style={{ backgroundColor: '#063d54' }} />
+
         <ContainerOptions>
           <ButtonsActions>
-            <Text>Indique aos amigos</Text>
+            <Text style={{ color: '#FFF' }}>Gift Cards</Text>
           </ButtonsActions>
           <ButtonsActions>
-            <Text>Gift Cards</Text>
-          </ButtonsActions>
-          <ButtonsActions>
-            <Text>Comprovantes</Text>
+            <Text style={{ color: '#FFF' }}>Comprovantes</Text>
           </ButtonsActions>
         </ContainerOptions>
       </Container>

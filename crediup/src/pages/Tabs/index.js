@@ -6,9 +6,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Home from './Home';
 import Extract from './Extract';
 import Profile from './Profile';
+import GenerateCard from './Home/GenerateCard';
 
 const HomeStack = createStackNavigator({
   Home,
+  GenerateCard,
 });
 
 const ExtractStack = createStackNavigator({

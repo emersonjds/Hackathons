@@ -39,7 +39,7 @@ export const RightArea = styled.View`
   justify-content: center;
 `;
 
-export const GenerateCard = styled.View`
+export const GenerateCard = styled.TouchableOpacity`
   height: 80%;
   width: 80%;
   align-self: center;
@@ -51,22 +51,23 @@ export const GenerateCard = styled.View`
 `;
 
 export const ContainerOptions = styled.View`
-  height: 80;
+  height: 25%;
   width: 100%;
   /* background-color: yellow; */
-  flex-direction: row;
   margin-bottom: ${metrics.basePadding}px;
-  margin-top: ${metrics.basePadding}px;
+  margin-top: 10px;
   align-items: center;
   justify-content: space-around;
 `;
 
-export const ButtonsActions = styled.View`
-  height: 80%;
-  width: 30%;
+export const ButtonsActions = styled.TouchableOpacity`
+  height: 60;
+  width: 100%;
   border-width: 2px;
   border-color: #063d54;
-  border-radius: ${metrics.baseRadius};
   align-items: center;
   justify-content: center;
+  background-color: ${colors.blue[5]};
+  margin-bottom: 15px;
+  border-radius: 40px;
 `;
