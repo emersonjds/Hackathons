@@ -19,7 +19,7 @@ export const CardArea = styled.View`
 export const ContainerUserData = styled.View`
   height: 80;
   width: 100%;
-  background-color: yellow;
+  /* background-color: yellow; */
   flex-direction: row;
   margin-bottom: ${metrics.basePadding}px;
   margin-top: ${metrics.basePadding}px;
@@ -43,6 +43,27 @@ export const GenerateCard = styled.View`
   height: 80%;
   width: 80%;
   align-self: center;
+  border-width: 2px;
+  border-color: blue;
+  border-radius: ${metrics.baseRadius};
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ContainerOptions = styled.View`
+  height: 80;
+  width: 100%;
+  /* background-color: yellow; */
+  flex-direction: row;
+  margin-bottom: ${metrics.basePadding}px;
+  margin-top: ${metrics.basePadding}px;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+export const ButtonsActions = styled.View`
+  height: 80%;
+  width: 30%;
   border-width: 2px;
   border-color: blue;
   border-radius: ${metrics.baseRadius};

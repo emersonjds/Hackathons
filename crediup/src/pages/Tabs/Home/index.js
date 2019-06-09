@@ -8,6 +8,8 @@ import {
   LeftArea,
   RightArea,
   GenerateCard,
+  ContainerOptions,
+  ButtonsActions,
 } from './styles';
 import card from '../../../assets/img/c_user.png';
 
@@ -30,8 +32,7 @@ export class Home extends Component {
           <LeftArea>
             <Text style={{ color: 'blue' }}>Limite Disponivel / Ocultar</Text>
             <View style={{ flexDirection: 'row' }}>
-              <Text style={{ color: 'blue' }}>R$</Text>
-
+              <Text>R$</Text>
               <Text style={{ fontSize: 28, color: 'blue' }}> 800,00 </Text>
             </View>
           </LeftArea>
@@ -43,7 +44,17 @@ export class Home extends Component {
           </RightArea>
         </ContainerUserData>
         <Divider style={{ backgroundColor: 'blue' }} />
-        <ContainerUserData />
+        <ContainerOptions>
+          <ButtonsActions>
+            <Text>Indique aos amigos</Text>
+          </ButtonsActions>
+          <ButtonsActions>
+            <Text>Gift Cards</Text>
+          </ButtonsActions>
+          <ButtonsActions>
+            <Text>Comprovantes</Text>
+          </ButtonsActions>
+        </ContainerOptions>
       </Container>
     );
   }
