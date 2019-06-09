@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import {
+  Text, View, Image, Alert,
+} from 'react-native';
 import {
   Container,
   Title,
@@ -24,7 +26,38 @@ export class GenerateCard extends Component {
     title: 'CARTAO VIRTUAL',
   };
 
-  state = {};
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      cardSlot1: '0000',
+      cardSlot2: '0000',
+      cardSlot3: '0000',
+      cardSlot4: '0000',
+      cvv: '000',
+      dateExp: '00/00',
+    };
+  }
+
+  generateNumber = (range1, range2) => Math.floor(Math.random() * range1) + range2;
+
+  handleGenerateNumber = () => {
+    const cardSlot1 = this.generateNumber(2000, 5000);
+    const cardSlot2 = this.generateNumber(2000, 5000);
+    const cardSlot3 = this.generateNumber(2000, 5000);
+    const cardSlot4 = this.generateNumber(2000, 5000);
+    const cvv = this.generateNumber(100, 500);
+    const dateExp = `${this.generateNumber(12, 14)}/${this.generateNumber(5, 6)}`;
+
+    this.setState({
+      cardSlot1,
+      cardSlot2,
+      cardSlot3,
+      cardSlot4,
+      cvv,
+      dateExp,
+    });
+  };
 
   render() {
     return (
@@ -49,16 +82,16 @@ export class GenerateCard extends Component {
             </TextGold>
           </LineOne>
           <SecondLine>
-            <CardNumber>1234</CardNumber>
-            <CardNumber>1234</CardNumber>
-            <CardNumber>1234</CardNumber>
-            <CardNumber>1234</CardNumber>
+            <CardNumber>{this.state.cardSlot1}</CardNumber>
+            <CardNumber>{this.state.cardSlot2}</CardNumber>
+            <CardNumber>{this.state.cardSlot3}</CardNumber>
+            <CardNumber>{this.state.cardSlot4}</CardNumber>
           </SecondLine>
           <Thirdline>
             <Text style={{ color: 'silver' }}>CCV</Text>
-            <CardNumber>****</CardNumber>
+            <CardNumber>{this.state.cvv}</CardNumber>
             <Text style={{ color: 'silver' }}>DATA EXP</Text>
-            <CardNumber>XX / XX</CardNumber>
+            <CardNumber>{this.state.dateExp}</CardNumber>
           </Thirdline>
           <FourLine>
             <CardNumber>Matheus Silva</CardNumber>
@@ -68,7 +101,7 @@ export class GenerateCard extends Component {
           </FourLine>
         </Card>
 
-        <GenerateNewNumber>
+        <GenerateNewNumber onPress={this.handleGenerateNumber}>
           <Text>Gerar</Text>
           <Text>Cartao Virtual</Text>
         </GenerateNewNumber>

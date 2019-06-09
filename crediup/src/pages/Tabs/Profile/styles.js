@@ -106,13 +106,13 @@ export const PriceProduct = styled.View`
 export const ContainerPoints = styled.View`
   flex: 1;
   /* background-color: brown; */
-  top: 180;
+  top: 45%;
 `;
 
 export const TextArea = styled.View`
   border-bottom-width: 1px;
   border-bottom-color: #063d54;
-  margin: 0px 20px;
+  margin: 10px 20px;
   padding: 0px 0px 10px 0px;
   flex-direction: row;
   justify-content: space-between;

@@ -34,7 +34,7 @@ export class Login extends Component {
           <LoginText>Faca seu login para prosseguir para o crediup</LoginText>
           <FormDataLogin>
             <TextInput
-              placeholder="SEU CPF"
+              placeholder="SEU EMAIL"
               placeholderTextColor="#063d54"
               style={{
                 borderWidth: 1,

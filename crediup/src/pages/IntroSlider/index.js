@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Text, View, Image, StatusBar,
+  Text, View, Image, StatusBar, Dimensions,
 } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { Container } from './styles';
@@ -27,7 +27,7 @@ export class IntroSlider extends Component {
 
   _renderItem = item => (
     <View>
-      <Image source={item.image} />
+      <Image source={item.image} style={{ width: Dimensions.get('window').width }} />
     </View>
   );
 

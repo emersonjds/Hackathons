@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { Text, Image, View } from 'react-native';
+import {
+  Text, Image, View, Alert,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import ImagePicker from 'react-native-image-picker';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import {
   Container,
   WhiteContainer,
@@ -18,13 +22,86 @@ import {
 import man from '../../../assets/img/man.png';
 import api from '../../../services/api';
 
+const options = {
+  title: 'Enviar documento para analise',
+  storageOptions: {
+    skipBackup: true,
+    path: 'images',
+  },
+};
+
 export class Profile extends Component {
   static navigationOptions = {
     title: 'MEUS GASTOS',
   };
 
-  state = {
-    data: [],
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: [],
+      avatarSource: '',
+      limiteTotal: 1600,
+    };
+  }
+
+  handleImagePicker = async () => {
+    const url = 'http://hacka-febraban3-dev.us-west-2.elasticbeanstalk.com/upload-doc';
+
+    ImagePicker.showImagePicker(options, async (response) => {
+      console.log('Response = ', response);
+
+      if (response.didCancel) {
+        console.log('User cancelled image picker');
+      } else if (response.error) {
+        console.log('ImagePicker Error: ', response.error);
+      } else if (response.customButton) {
+        console.log('User tapped custom button: ', response.customButton);
+      } else {
+        const source = { uri: response.uri };
+
+        // You can also display the image using data:
+        const sourceBase64 = { uri: `data:image/jpeg;base64,${response.data}` };
+
+        this.setState(
+          {
+            avatarSource: source,
+            avatarSourceBase64: sourceBase64,
+          },
+          async () => {
+            // Prepare FormData
+            const formData = new FormData();
+
+            formData.append('userId', 'teste123');
+
+            formData.append('teste', {
+              uri: this.state.avatarSourceBase64.uri,
+              name: 'teste',
+              type: 'image/jpeg',
+            });
+
+            // const rawResponse = await fetch(url, {
+            //   method: 'POST',
+            //   body: formData,
+            // });
+
+            // const content = await rawResponse.json();
+
+            // console.log(content);
+
+            setTimeout(() => {
+              // this.setState({
+              // limiteTotal: 2000,
+              // });
+
+              console.log(this.state);
+
+              Alert.alert('Imagem enviada para analise de Score!');
+            }, 3000);
+          },
+        );
+      }
+    });
   };
 
   render() {
@@ -40,7 +117,11 @@ export class Profile extends Component {
             <ContainerDataAccount>
               <TotalLimtit>
                 <Text style={{ color: '#063d54' }}>Seu Limite Total</Text>
-                <Text style={{ fontSize: 24, color: '#063d54', fontWeight: 'bold' }}>R$ 1.600</Text>
+                <Text style={{ fontSize: 24, color: '#063d54', fontWeight: 'bold' }}>
+                  R$
+                  {' '}
+                  {this.state.limiteTotal}
+                </Text>
               </TotalLimtit>
               <CurrentLimit>
                 <Text style={{ color: '#063d54' }}>Seu Limite</Text>
@@ -50,31 +131,30 @@ export class Profile extends Component {
           </UserContainer>
 
           <ContainerPoints>
-            <TextArea>
-              <Text
-                style={{
-                  color: '#063d54',
-                  alignSelf: 'center',
-                  marginTop: 20,
-                  fontSize: 20,
-                }}
-              >
-                Meus Pontos: 16
-              </Text>
-            </TextArea>
-            <TextArea style={{ marginTop: 160 }}>
-              <Text
-                style={{
-                  color: '#063d54',
-                  alignSelf: 'center',
-                  marginTop: 20,
-                  fontSize: 20,
-                }}
-              >
-                Enviar Arquivos
-              </Text>
-              <Icon size={22} name="upload" color="#063d54" style={{ marginTop: 25 }} />
-            </TextArea>
+            <Image
+              source={this.state.avatarSource}
+              style={{
+                width: 100,
+                height: 100,
+              }}
+            />
+            <TouchableOpacity
+              onPress={this.handleImagePicker}
+              style={{
+                backgroundColor: '#063d54',
+                marginHorizontal: 20,
+                height: 50,
+                flexDirection: 'row',
+                width: '90%',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                paddingHorizontal: 20,
+                alignSelf: 'flex-end',
+              }}
+            >
+              <Text style={{ color: '#FFF' }}>ENVIAR ARQUIVOS</Text>
+              <Icon size={22} name="upload" color="#FFF" style={{ marginTop: 5 }} />
+            </TouchableOpacity>
             <Text
               style={{
                 color: '#063d54',
