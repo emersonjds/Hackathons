@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, Image } from 'react-native';
 import { Divider } from 'react-native-elements';
+import { bold } from 'ansi-colors';
 import {
   Container,
   CardArea,
@@ -33,7 +34,7 @@ export class Home extends Component {
             <Text style={{ color: '#063d54' }}>Limite Disponivel / Ocultar</Text>
             <View style={{ flexDirection: 'row' }}>
               <Text>R$</Text>
-              <Text style={{ fontSize: 28, color: '#063d54' }}> 800,00 </Text>
+              <Text style={{ fontSize: 28, color: '#063d54', fontWeight: 'bold' }}> 800,00 </Text>
             </View>
           </LeftArea>
           <RightArea>

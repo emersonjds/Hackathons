@@ -52,11 +52,11 @@ export class Extract extends Component {
             <ContainerDataAccount>
               <TotalLimtit>
                 <Text style={{ color: '#FFF' }}>Seu Limite Total</Text>
-                <Text style={{ fontSize: 24, color: '#FFF' }}>R$ 1.600</Text>
+                <Text style={{ fontSize: 24, color: '#FFF', fontWeight: 'bold' }}>R$ 1.600</Text>
               </TotalLimtit>
               <CurrentLimit>
-                <Text style={{ color: '#FFF' }}>Seu Limite Total</Text>
-                <Text style={{ fontSize: 24, color: '#FFF' }}>R$ 800</Text>
+                <Text style={{ color: '#FFF' }}>Limite Disponivel</Text>
+                <Text style={{ fontSize: 24, color: '#FFF', fontWeight: 'bold' }}>R$ 800</Text>
               </CurrentLimit>
             </ContainerDataAccount>
           </UserContainer>

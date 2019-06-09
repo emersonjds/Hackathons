@@ -40,11 +40,11 @@ export class Profile extends Component {
             <ContainerDataAccount>
               <TotalLimtit>
                 <Text style={{ color: '#063d54' }}>Seu Limite Total</Text>
-                <Text style={{ fontSize: 24, color: '#063d54' }}>R$ 1.600</Text>
+                <Text style={{ fontSize: 24, color: '#063d54', fontWeight: 'bold' }}>R$ 1.600</Text>
               </TotalLimtit>
               <CurrentLimit>
                 <Text style={{ color: '#063d54' }}>Seu Limite</Text>
-                <Text style={{ fontSize: 24, color: '#063d54' }}>R$ 800</Text>
+                <Text style={{ fontSize: 24, color: '#063d54', fontWeight: 'bold' }}>R$ 800</Text>
               </CurrentLimit>
             </ContainerDataAccount>
           </UserContainer>
