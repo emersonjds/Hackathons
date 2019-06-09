@@ -61,4 +61,6 @@ export const SignIn = styled.TouchableOpacity`
   justify-content: center;
   background-color: ${colors.blue[5]};
   height: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
 `;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   Image, StatusBar, Text, TextInput,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {
   Container,
   ButtonLogin,
@@ -74,8 +75,9 @@ export class Login extends Component {
           <NewAccount>
             <Text style={{ color: '#063d54' }}>Nova Conta</Text>
           </NewAccount>
-          <SignIn>
+          <SignIn onPress={() => navigation.navigate('Tabs')}>
             <Text style={{ color: '#FFF' }}>Entrar</Text>
+            <Icon size={20} color="#FFF" name="long-arrow-right" />
           </SignIn>
         </LoginButtons>
       </Container>
