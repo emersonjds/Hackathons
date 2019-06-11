@@ -5,8 +5,6 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {
   Container,
-  ButtonLogin,
-  TextButton,
   ContainerHeader,
   DataLogin,
   FormDataLogin,
@@ -25,6 +23,7 @@ export class Login extends Component {
   };
 
   render() {
+    const { user, password } = this.state;
     const { navigation } = this.props;
     return (
       <Container>
@@ -48,7 +47,7 @@ export class Login extends Component {
                 paddingLeft: 20,
                 borderColor: '#063d54',
               }}
-              value={this.state.user}
+              value={user}
             />
             <TextInput
               placeholder="SENHA"
@@ -62,7 +61,7 @@ export class Login extends Component {
                 paddingLeft: 20,
                 borderColor: '#063d54',
               }}
-              value={this.state.password}
+              value={password}
             />
             <Text
               style={{

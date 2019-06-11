@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { colors, metrics } from '../../styles';
+import { colors } from '../../styles';
 
 export const Container = styled.View`
   flex: 1;
@@ -32,12 +32,10 @@ export const LoginText = styled.Text`
 export const FormDataLogin = styled.View`
   height: 220;
   width: 100%;
-  /* background-color: pink; */
   padding-top: 20px;
 `;
 
 export const LoginButtons = styled.View`
-  /* background-color: red; */
   height: 10%;
   width: 100%;
   flex-direction: row;
