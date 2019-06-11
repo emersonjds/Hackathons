@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
 import {
-  Divider, List, FlatList, ListItem,
-} from 'react-native-elements';
+  Text, View, Image, ActivityIndicator,
+} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import {
   Container,
@@ -61,21 +60,25 @@ export class Extract extends Component {
             </ContainerDataAccount>
           </UserContainer>
           <ScrollView style={{ top: 180, marginHorizontal: 20 }}>
-            {this.state.data.map(ultimaCompra => (
-              <BoxBuy key={ultimaCompra._id}>
-                <ProductDetails>
-                  <Text style={{ color: '#FFF', fontWeight: 'bold' }}>{ultimaCompra.seller}</Text>
-                </ProductDetails>
-                <PriceProduct>
-                  <Text style={{ color: '#FFF', fontWeight: 'bold' }}>
-                    {' '}
-                    - R$
-                    {ultimaCompra.value}
-                  </Text>
-                  {/* <Text style={{ fontSize: 10, color: '#FFF' }}>CARTÃO</Text> */}
-                </PriceProduct>
-              </BoxBuy>
-            ))}
+            {!this.state.data ? (
+              <ActivityIndicator size={20} color="#FFF" />
+            ) : (
+              this.state.data.map(ultimaCompra => (
+                <BoxBuy key={ultimaCompra._id}>
+                  <ProductDetails>
+                    <Text style={{ color: '#FFF', fontWeight: 'bold' }}>{ultimaCompra.seller}</Text>
+                  </ProductDetails>
+                  <PriceProduct>
+                    <Text style={{ color: '#FFF', fontWeight: 'bold' }}>
+                      {' '}
+                      - R$
+                      {ultimaCompra.value}
+                    </Text>
+                    {/* <Text style={{ fontSize: 10, color: '#FFF' }}>CARTÃO</Text> */}
+                  </PriceProduct>
+                </BoxBuy>
+              ))
+            )}
           </ScrollView>
         </BlueContainer>
       </Container>

@@ -19,7 +19,10 @@ import {
 import header from '../../assets/img/credilogo.png';
 
 export class Login extends Component {
-  state = {};
+  state = {
+    user: 'bruno@gmail.com',
+    password: '123',
+  };
 
   render() {
     const { navigation } = this.props;
@@ -45,6 +48,7 @@ export class Login extends Component {
                 paddingLeft: 20,
                 borderColor: '#063d54',
               }}
+              value={this.state.user}
             />
             <TextInput
               placeholder="SENHA"
@@ -58,6 +62,7 @@ export class Login extends Component {
                 paddingLeft: 20,
                 borderColor: '#063d54',
               }}
+              value={this.state.password}
             />
             <Text
               style={{

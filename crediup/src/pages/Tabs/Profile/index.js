@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {
-  Text, Image, View, Alert,
+  Text, Image, View, Alert, TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ImagePicker from 'react-native-image-picker';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import {
   Container,
   WhiteContainer,
@@ -32,7 +31,7 @@ const options = {
 
 export class Profile extends Component {
   static navigationOptions = {
-    title: 'MEUS GASTOS',
+    title: 'PERFIL',
   };
 
   constructor(props) {
@@ -77,7 +76,7 @@ export class Profile extends Component {
             formData.append('teste', {
               uri: this.state.avatarSourceBase64.uri,
               name: 'teste',
-              type: 'image/jpeg',
+              type: 'image/jpg',
             });
 
             // const rawResponse = await fetch(url, {
@@ -90,13 +89,16 @@ export class Profile extends Component {
             // console.log(content);
 
             setTimeout(() => {
-              // this.setState({
-              // limiteTotal: 2000,
-              // });
-
-              console.log(this.state);
-
               Alert.alert('Imagem enviada para analise de Score!');
+
+              setTimeout(() => {
+                this.setState({
+                  limiteTotal: 2000,
+                }),
+                () => {
+                  Alert.alert('Aumento de credito concedido com sucesso!');
+                };
+              }, 3500);
             }, 3000);
           },
         );
@@ -136,6 +138,8 @@ export class Profile extends Component {
               style={{
                 width: 100,
                 height: 100,
+                marginHorizontal: 20,
+                marginBottom: 20,
               }}
             />
             <TouchableOpacity
@@ -150,6 +154,7 @@ export class Profile extends Component {
                 alignItems: 'center',
                 paddingHorizontal: 20,
                 alignSelf: 'flex-end',
+                zIndex: 1,
               }}
             >
               <Text style={{ color: '#FFF' }}>ENVIAR ARQUIVOS</Text>

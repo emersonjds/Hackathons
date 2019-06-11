@@ -107,6 +107,7 @@ export const ContainerPoints = styled.View`
   flex: 1;
   /* background-color: brown; */
   top: 45%;
+  margin: 0px 20px;
 `;
 
 export const TextArea = styled.View`
