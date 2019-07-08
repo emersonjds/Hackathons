@@ -43,6 +43,10 @@ export class ProductDetails extends Component {
     },
   };
 
+  state = {
+    data: []
+  }
+
   render() {
     const { navigation } = this.props;
     return (
