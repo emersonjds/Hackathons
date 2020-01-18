@@ -1,5 +1,7 @@
-import React, { Component } from "react";
-import Routes from "./routes";
+import React, {Component} from 'react';
+console.disableYellowBox = true;
+
+import Routes from './routes';
 
 export default class App extends Component {
   render() {
