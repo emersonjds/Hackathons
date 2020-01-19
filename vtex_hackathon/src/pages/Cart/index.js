@@ -11,7 +11,7 @@ export class Cart extends Component {
         <IconFontAwesome
           name="chevron-left"
           size={22}
-          style={{ paddingLeft: 16, color: "#000" }}
+          style={{ paddingLeft: 16, color: "#FFF" }}
         />
       </TouchableOpacity>
     )
